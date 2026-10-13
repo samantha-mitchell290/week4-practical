@@ -14,6 +14,7 @@ foreach (var car in carManufacturers)
     Console.WriteLine(car);
 }
 
+//accessing an invalid carManufacturers index
 /* for(int carIndex = 0; carIndex <= carManufacturers.Length; carIndex++)
 {
     Console.WriteLine(carManufacturers[5]);
@@ -49,3 +50,14 @@ string[] monthNamesArray = months.ToArray();
 Console.WriteLine(" ");
 
 //Challenge 3
+
+Dictionary<string, int> inventory = new Dictionary<string, int>();
+inventory.Add("Health potion", 5);
+inventory.Add("Mana potion", 2);
+inventory.Add("Gold coin", 100);
+
+inventory["Health potion"] = 20;
+Console.WriteLine(inventory["Health potion"]);
+
+//Accessing a key that is invalid
+//Console.WriteLine(inventory["Iron sword"]);
