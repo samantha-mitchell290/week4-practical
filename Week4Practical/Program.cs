@@ -2,24 +2,41 @@
 //Challenge 1
 
 string[] carManufacturers = { "Ford", "Toyota", "BMV", "Honda" };
+
 foreach (var car in carManufacturers)
 {
     Console.WriteLine(car);
 }
+
 Console.WriteLine(" ");
 
 Array.Sort(carManufacturers);
+
 foreach (var car in carManufacturers)
 {
     Console.WriteLine(car);
 }
 
 //accessing an invalid carManufacturers index
-/* for(int carIndex = 0; carIndex <= carManufacturers.Length; carIndex++)
+//Challenge 4
+try
 {
-    Console.WriteLine(carManufacturers[5]);
+    for(int carIndex = 0; carIndex <= carManufacturers.Length; carIndex++)
+    {
+        Console.WriteLine(carManufacturers[carIndex]);
+    }
 }
-*/
+catch (Exception)
+{
+    Console.WriteLine("Error: Attempted to access an array index that does not exist");
+}
+finally
+{
+    Console.WriteLine("Array processing complete");
+}
+ 
+
+
 Console.WriteLine(" ");
 
 
@@ -60,4 +77,16 @@ inventory["Health potion"] = 20;
 Console.WriteLine(inventory["Health potion"]);
 
 //Accessing a key that is invalid
-//Console.WriteLine(inventory["Iron sword"]);
+//Challenge 4
+try
+{
+    Console.WriteLine(inventory["Iron sword"]);
+}
+catch (Exception)
+{
+    Console.WriteLine("Error: Item not found in inventory");
+}
+finally
+{
+    Console.WriteLine("Dictionary processing complete");
+}
