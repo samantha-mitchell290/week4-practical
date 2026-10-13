@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using Week4Practical;
 //Challenge 1
 
 string[] carManufacturers = { "Ford", "Toyota", "BMV", "Honda" };
@@ -90,3 +91,18 @@ finally
 {
     Console.WriteLine("Dictionary processing complete");
 }
+
+Console.WriteLine(" ");
+
+//Challenge 5
+
+Student student1 = new Student(1, "Alice Smith", 20);
+
+List<Student> student = new List<Student>();
+student.Add(student1);
+
+Student student2 = student1;
+
+student2.Age = 99;
+
+student1.Display();
